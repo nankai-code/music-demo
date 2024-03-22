@@ -29,5 +29,6 @@ export default new VueRouter({
       path: "/recommend",
       component: recommend
     }
-  ]
+  ],
+  mode: "history"
 })
