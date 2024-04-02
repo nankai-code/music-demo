@@ -45,7 +45,7 @@ export default {
       disclist: [], // 存储下面列表信息的推荐信息
     };
   },
-  beforeCreate() {
+  created() {
     axios.get("http://localhost:9527/api/getRecommendData").then((data) => {
       this.sliderRecommends = data.data.shift().categoryList; // shift删除第一项，并且返回第一项，修改原数组
       // eslint-disable-next-line no-console

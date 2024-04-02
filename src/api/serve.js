@@ -1,6 +1,7 @@
 const express = require("express")
 const {getRecommendData} = require("./recommend/getRecommendData")
 const {getRecommendDetailData} = require("./recommendDetail/setDetailDate")
+const {getSingerData} = require("./singer/getSingerData")
 var bodyParser = require('body-parser')
 
 let app = express() // 使用exoress
@@ -29,5 +30,6 @@ app.all("*", function (req, res, next) { //解决跨域请求问题
 
 app.get("/api/getRecommendData",getRecommendData)
 app.get("/api/getRecommendDetailData/:id",getRecommendDetailData)
+app.get("/api/getSingerData",getSingerData)
 
 app.listen(9527)
